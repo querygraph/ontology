@@ -80,6 +80,10 @@ not fork the normalizer or the seed.
   concepts, but corrections and additions of general interest belong here so
   every application inherits them.
 - Snapshots are immutable values. Derive; don't mutate.
+- Every chooser skin must pass `runChooserConformance` from `./conformance`
+  in its own test suite (Verdun: `smoke:ontology-conformance`; disappointed:
+  `tests/gauge-conformance.test.mjs`). The runner derives truth from the
+  engine, so skins that re-derive selection logic fail loudly.
 
 ## Provenance
 
