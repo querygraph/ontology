@@ -81,3 +81,8 @@ test('alias index resolves shorthand to slugs', () => {
   assert.equal(aliases.get(normalizeTopicLabel('golang')), 'go-language')
   assert.equal(aliases.get(normalizeTopicLabel('rap')), 'hip-hop')
 })
+
+test('the reference chooser adapter passes conformance', async () => {
+  const { referenceChooserAdapter, runChooserConformance } = await import('../dist/conformance.js')
+  assert.deepEqual(runChooserConformance(referenceChooserAdapter()), [])
+})

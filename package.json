@@ -34,6 +34,10 @@
     "./normalization-core": {
       "types": "./dist/normalization-core.d.mts",
       "default": "./dist/normalization-core.mjs"
+    },
+    "./conformance": {
+      "types": "./dist/conformance.d.ts",
+      "default": "./dist/conformance.js"
     }
   },
   "files": [
