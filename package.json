@@ -6,15 +6,41 @@
   "license": "MIT",
   "repository": "github:querygraph/ontology",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-    "./normalization": { "types": "./dist/normalization.d.ts", "default": "./dist/normalization.js" },
-    "./matching": { "types": "./dist/matching.d.ts", "default": "./dist/matching.js" },
-    "./navigator": { "types": "./dist/navigator.d.ts", "default": "./dist/navigator.js" },
-    "./seed": { "types": "./dist/seed.d.ts", "default": "./dist/seed.js" },
-    "./extraction": { "types": "./dist/extraction.d.ts", "default": "./dist/extraction.js" },
-    "./package.json": "./package.json"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./normalization": {
+      "types": "./dist/normalization.d.ts",
+      "default": "./dist/normalization.js"
+    },
+    "./matching": {
+      "types": "./dist/matching.d.ts",
+      "default": "./dist/matching.js"
+    },
+    "./navigator": {
+      "types": "./dist/navigator.d.ts",
+      "default": "./dist/navigator.js"
+    },
+    "./seed": {
+      "types": "./dist/seed.d.ts",
+      "default": "./dist/seed.js"
+    },
+    "./extraction": {
+      "types": "./dist/extraction.d.ts",
+      "default": "./dist/extraction.js"
+    },
+    "./package.json": "./package.json",
+    "./normalization-core": {
+      "types": "./dist/normalization-core.d.mts",
+      "default": "./dist/normalization-core.mjs"
+    }
   },
-  "files": ["dist", "src", "ONTOLOGY.md"],
+  "files": [
+    "dist",
+    "src",
+    "ONTOLOGY.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json && cp src/normalization-core.mjs src/normalization-core.d.mts dist/",
     "test": "npm run build && node --test tests/*.test.mjs",
