@@ -66,6 +66,11 @@ not fork the normalizer or the seed.
 
 ## Consumption rules
 
+- Verdun exposes the chooser as an isolated module: `@querygraph/ontology`
+  and `vue` are *optional peer dependencies* there, so accounts-only Verdun
+  consumers never install the ontology stack. Apps that mount the chooser
+  declare and pin this package themselves.
+
 - Depend on a pinned release or commit
   (`github:querygraph/ontology#<commit>`), never a sibling path: an ontology
   regression must not change an already-resolved application build.
