@@ -38,15 +38,17 @@
     "./conformance": {
       "types": "./dist/conformance.d.ts",
       "default": "./dist/conformance.js"
-    }
+    },
+    "./db/ontology-migrations": "./db/public/ontology-migrations.mjs"
   },
   "files": [
     "dist",
     "src",
-    "ONTOLOGY.md"
+    "ONTOLOGY.md",
+    "db"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && cp src/normalization-core.mjs src/normalization-core.d.mts dist/",
+    "build": "tsc -p tsconfig.json && cp src/normalization-core.mjs src/normalization-core.d.mts dist/ && node scripts/generate-rust-artifacts.mjs && node scripts/emit-seed-sql.mjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "prepublishOnly": "npm test"
   },

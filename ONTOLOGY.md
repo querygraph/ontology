@@ -7,19 +7,31 @@ each repository's AGENTS.md points here.
 ## The layering
 
 ```
-@querygraph/ontology          (this repo — data engineering)
-  durable normalization · matching · three-tier navigator view-model ·
-  cold-start seed taxonomy · topic extraction from text
+querygraph/ontology           (this repo — data engineering)
+  JS:   durable normalization · matching · three-tier navigator view-model ·
+        cold-start seed taxonomy · topic extraction · chooser conformance
+  Rust: ontology-core (normalization with golden-fixture key parity, seed,
+        extraction) · ontology-graph (Grust property-graph projection)
+  SQL:  db/migrations + generated seed — the shared *shape* of a topic store
         │
-@querygraph/verdun            (interaction layer)
-  frontend/ontology-ui: the Vue three-tier chooser over the navigator
+@querygraph/verdun            (interaction layer: Vue chooser UI)
+somme                         (CLI-family machinery for topic commands)
         │
-applications                  (specialization)
-  devreal        React UI over the shared engine; owns its relational
-                 ontology store, proposals, review, path optimization runs
-  disappointed   vanilla-DOM gauge over the navigator; ontology concepts
-                 materialize into dis_topic rows on demand
+applications                  (specialization — each with ITS OWN database)
+  devreal        React UI + its relational ontology/graph store, proposals,
+                 review, path optimization; grust projection in graph-wasm
+  disappointed   vanilla-DOM gauge; concepts materialize into dis_topic;
+                 Rust pipeline for extraction/labeling
 ```
+
+**Shared machinery, never shared data.** There is no shared database and no
+shared dataset — not for the ontology, not for the graph. Every application
+applies the SQL manifest (`db/ontology-migrations`) and the seed to its own
+database, grows its own topics, and runs the same algorithms (matching,
+solicitation/labeling gates, extraction, navigation) over its own rows.
+Corrections to the *machinery* — the schema shapes, the seed taxonomy, the
+normalizer — flow through this repository so every application inherits them;
+rows never do.
 
 **Cold-start ontology and topic extraction from text live here.** Interactive
 UI and selection live in Verdun. Applications reuse and specialize; they do
@@ -53,11 +65,14 @@ not fork the normalizer or the seed.
 
 ## What this package does not own
 
-- **Storage.** DevReal keeps its relational ontology store (concepts backed
-  by graph entities, aliases with provenance, immutable published navigation
-  versions, proposals, path aggregates, optimization runs) — see
-  `devreal/docs/TOPIC-ONTOLOGY.md`. Disappointed keeps `dis_topic` +
-  `dis_topic_edge`. Storage schemas consume this package's keys and shapes.
+- **Data.** This repo ships storage *shapes* (`db/migrations/0001_ontology.sql`:
+  onto_concept/edge/alias/proposal/label, plus the generated idempotent seed
+  SQL) but never rows. DevReal additionally keeps its richer relational store
+  (versions, path aggregates, optimization runs) — see
+  `devreal/docs/TOPIC-ONTOLOGY.md`; disappointed keeps `dis_topic`. The
+  `onto_label.subject_id` and `onto_proposal.proposed_by` columns are opaque
+  app-defined identifiers precisely so this schema never references an
+  application's own tables.
 - **Review and governance.** Proposal review, alias approval, and version
   publication are application workflows.
 - **Rendered UI.** Verdun ships the reusable chooser; apps may also render
@@ -94,6 +109,23 @@ Extracted verbatim (import paths aside) from DevReal on 2026-08-19:
 `lib/topic-ui.ts` → `src/navigator.ts`.
 DevReal now re-exports these from the package, so its store, routes, and
 tests keep their import paths. The seed and extraction modules are new here.
+
+## The Rust backend
+
+`rust/` is a cargo workspace consumed by application pipelines and services
+(git-pinned, like the JS package):
+
+- **ontology-core** — `normalize_topic_label` (ported from the JS core; the
+  Unicode tables in `src/tables.rs`, the seed in `dist/seed.json`, and the
+  149-label golden fixture are all *generated from the JS engine* by
+  `scripts/generate-rust-artifacts.mjs`, so the stacks cannot drift
+  silently), seed snapshot building, and exact-key extraction. Persisted
+  keys may come from either language: parity is test-enforced.
+- **ontology-graph** — projects concepts (and app content labeled with them)
+  into a `grust::Graph` (`concept` nodes, `within` edges, `about` edges), so
+  any Grust `GraphStore` backend — memory for pipelines, grust-postgres for
+  persistence — works without this repo choosing one. DevReal's `graph-wasm`
+  is the same idea aimed at the browser.
 
 ## Roadmap
 

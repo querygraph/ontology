@@ -1,0 +1,11 @@
+[package]
+name = "ontology-graph"
+description = "Project the shared topic ontology (and app content labeled with it) into a Grust property graph, backend-neutral"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+grust = { package = "grust-graph", version = "0.12.1" }
+ontology-core = { path = "../ontology-core" }

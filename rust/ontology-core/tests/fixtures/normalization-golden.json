@@ -1,0 +1,610 @@
+{
+ "golden": [
+  {
+   "label": "Technology",
+   "key": "technology"
+  },
+  {
+   "label": "Science",
+   "key": "science"
+  },
+  {
+   "label": "Politics & government",
+   "key": "politics and government"
+  },
+  {
+   "label": "Business & economy",
+   "key": "business and economy"
+  },
+  {
+   "label": "Arts & culture",
+   "key": "arts and culture"
+  },
+  {
+   "label": "Health",
+   "key": "health"
+  },
+  {
+   "label": "Sports",
+   "key": "sports"
+  },
+  {
+   "label": "Food & drink",
+   "key": "food and drink"
+  },
+  {
+   "label": "Places & travel",
+   "key": "places and travel"
+  },
+  {
+   "label": "Society",
+   "key": "society"
+  },
+  {
+   "label": "Everyday life",
+   "key": "everyday life"
+  },
+  {
+   "label": "Programming languages",
+   "key": "programming languages"
+  },
+  {
+   "label": "Artificial intelligence",
+   "key": "artificial intelligence"
+  },
+  {
+   "label": "Software engineering",
+   "key": "software engineering"
+  },
+  {
+   "label": "Internet & web",
+   "key": "internet and web"
+  },
+  {
+   "label": "Data & databases",
+   "key": "data and databases"
+  },
+  {
+   "label": "Security & privacy",
+   "key": "security and privacy"
+  },
+  {
+   "label": "Hardware & devices",
+   "key": "hardware and devices"
+  },
+  {
+   "label": "Python",
+   "key": "python"
+  },
+  {
+   "label": "JavaScript",
+   "key": "javascript"
+  },
+  {
+   "label": "TypeScript",
+   "key": "typescript"
+  },
+  {
+   "label": "Rust",
+   "key": "rust"
+  },
+  {
+   "label": "Go",
+   "key": "go"
+  },
+  {
+   "label": "Java",
+   "key": "java"
+  },
+  {
+   "label": "C++",
+   "key": "c++"
+  },
+  {
+   "label": "C#",
+   "key": "c#"
+  },
+  {
+   "label": "Scala",
+   "key": "scala"
+  },
+  {
+   "label": "Machine learning",
+   "key": "machine learning"
+  },
+  {
+   "label": "Large language models",
+   "key": "large language models"
+  },
+  {
+   "label": "AI slop",
+   "key": "ai slop"
+  },
+  {
+   "label": "Open source",
+   "key": "open source"
+  },
+  {
+   "label": "DevOps",
+   "key": "devops"
+  },
+  {
+   "label": "Social media",
+   "key": "social media"
+  },
+  {
+   "label": "Search engines",
+   "key": "search engines"
+  },
+  {
+   "label": "Streaming",
+   "key": "streaming"
+  },
+  {
+   "label": "Smartphones",
+   "key": "smartphones"
+  },
+  {
+   "label": "Databases",
+   "key": "databases"
+  },
+  {
+   "label": "Data breaches",
+   "key": "data breaches"
+  },
+  {
+   "label": "Physics",
+   "key": "physics"
+  },
+  {
+   "label": "Life sciences",
+   "key": "life sciences"
+  },
+  {
+   "label": "Earth & climate",
+   "key": "earth and climate"
+  },
+  {
+   "label": "Space",
+   "key": "space"
+  },
+  {
+   "label": "Climate change",
+   "key": "climate change"
+  },
+  {
+   "label": "Weather",
+   "key": "weather"
+  },
+  {
+   "label": "Mathematics",
+   "key": "mathematics"
+  },
+  {
+   "label": "National government",
+   "key": "national government"
+  },
+  {
+   "label": "Elections",
+   "key": "elections"
+  },
+  {
+   "label": "Geopolitics",
+   "key": "geopolitics"
+  },
+  {
+   "label": "Local government",
+   "key": "local government"
+  },
+  {
+   "label": "Congress",
+   "key": "congress"
+  },
+  {
+   "label": "Public policy",
+   "key": "public policy"
+  },
+  {
+   "label": "The economy",
+   "key": "the economy"
+  },
+  {
+   "label": "Jobs & work",
+   "key": "jobs and work"
+  },
+  {
+   "label": "Companies",
+   "key": "companies"
+  },
+  {
+   "label": "Housing",
+   "key": "housing"
+  },
+  {
+   "label": "Inflation",
+   "key": "inflation"
+  },
+  {
+   "label": "Big Tech",
+   "key": "big tech"
+  },
+  {
+   "label": "Startups",
+   "key": "startups"
+  },
+  {
+   "label": "Crypto",
+   "key": "crypto"
+  },
+  {
+   "label": "Remote work",
+   "key": "remote work"
+  },
+  {
+   "label": "Film & TV",
+   "key": "film and tv"
+  },
+  {
+   "label": "Music",
+   "key": "music"
+  },
+  {
+   "label": "Books",
+   "key": "books"
+  },
+  {
+   "label": "Video games",
+   "key": "video games"
+  },
+  {
+   "label": "Movies",
+   "key": "movies"
+  },
+  {
+   "label": "Television",
+   "key": "television"
+  },
+  {
+   "label": "Hip-hop",
+   "key": "hip hop"
+  },
+  {
+   "label": "Pop music",
+   "key": "pop music"
+  },
+  {
+   "label": "Podcasts",
+   "key": "podcasts"
+  },
+  {
+   "label": "Healthcare system",
+   "key": "healthcare system"
+  },
+  {
+   "label": "Fitness",
+   "key": "fitness"
+  },
+  {
+   "label": "Mental health",
+   "key": "mental health"
+  },
+  {
+   "label": "Nutrition",
+   "key": "nutrition"
+  },
+  {
+   "label": "Football",
+   "key": "football"
+  },
+  {
+   "label": "Basketball",
+   "key": "basketball"
+  },
+  {
+   "label": "Soccer",
+   "key": "soccer"
+  },
+  {
+   "label": "Baseball",
+   "key": "baseball"
+  },
+  {
+   "label": "Restaurants",
+   "key": "restaurants"
+  },
+  {
+   "label": "Cooking",
+   "key": "cooking"
+  },
+  {
+   "label": "Coffee",
+   "key": "coffee"
+  },
+  {
+   "label": "Brunch",
+   "key": "brunch"
+  },
+  {
+   "label": "Cities",
+   "key": "cities"
+  },
+  {
+   "label": "Countries",
+   "key": "countries"
+  },
+  {
+   "label": "Transportation",
+   "key": "transportation"
+  },
+  {
+   "label": "Public transit",
+   "key": "public transit"
+  },
+  {
+   "label": "Airlines",
+   "key": "airlines"
+  },
+  {
+   "label": "Traffic",
+   "key": "traffic"
+  },
+  {
+   "label": "Education",
+   "key": "education"
+  },
+  {
+   "label": "Media & journalism",
+   "key": "media and journalism"
+  },
+  {
+   "label": "Dating",
+   "key": "dating"
+  },
+  {
+   "label": "Universities",
+   "key": "universities"
+  },
+  {
+   "label": "Cable news",
+   "key": "cable news"
+  },
+  {
+   "label": "HOAs",
+   "key": "hoas"
+  },
+  {
+   "label": "Commuting",
+   "key": "commuting"
+  },
+  {
+   "label": "Customer service",
+   "key": "customer service"
+  },
+  {
+   "label": "Group chats",
+   "key": "group chats"
+  },
+  {
+   "label": "Robocalls",
+   "key": "robocalls"
+  },
+  {
+   "label": "Self-improvement",
+   "key": "self improvement"
+  },
+  {
+   "label": "AI",
+   "key": "ai"
+  },
+  {
+   "label": "python programming",
+   "key": "python programming"
+  },
+  {
+   "label": "js",
+   "key": "js"
+  },
+  {
+   "label": "ts",
+   "key": "ts"
+  },
+  {
+   "label": "golang",
+   "key": "golang"
+  },
+  {
+   "label": "ml",
+   "key": "ml"
+  },
+  {
+   "label": "llm",
+   "key": "llm"
+  },
+  {
+   "label": "oss",
+   "key": "oss"
+  },
+  {
+   "label": "ci/cd",
+   "key": "ci/cd"
+  },
+  {
+   "label": "space exploration",
+   "key": "space exploration"
+  },
+  {
+   "label": "government",
+   "key": "government"
+  },
+  {
+   "label": "cryptocurrency",
+   "key": "cryptocurrency"
+  },
+  {
+   "label": "rap",
+   "key": "rap"
+  },
+  {
+   "label": "nfl",
+   "key": "nfl"
+  },
+  {
+   "label": "nba",
+   "key": "nba"
+  },
+  {
+   "label": "mlb",
+   "key": "mlb"
+  },
+  {
+   "label": "dating apps",
+   "key": "dating apps"
+  },
+  {
+   "label": "myself",
+   "key": "myself"
+  },
+  {
+   "label": "C",
+   "key": "c"
+  },
+  {
+   "label": "C++",
+   "key": "c++"
+  },
+  {
+   "label": "C#",
+   "key": "c#"
+  },
+  {
+   "label": "F#",
+   "key": "f#"
+  },
+  {
+   "label": ".NET",
+   "key": ".net"
+  },
+  {
+   "label": "Node.js",
+   "key": "node.js"
+  },
+  {
+   "label": "CI/CD",
+   "key": "ci/cd"
+  },
+  {
+   "label": "CI / CD",
+   "key": "ci/cd"
+  },
+  {
+   "label": "c＋＋",
+   "key": "c++"
+  },
+  {
+   "label": "  Machine   Learning ",
+   "key": "machine learning"
+  },
+  {
+   "label": "Don’t Panic",
+   "key": "dont panic"
+  },
+  {
+   "label": "rock 'n' roll",
+   "key": "rock n roll"
+  },
+  {
+   "label": "AT&T",
+   "key": "at and t"
+  },
+  {
+   "label": "naïve café",
+   "key": "naive cafe"
+  },
+  {
+   "label": "Neo—Tokyo",
+   "key": "neo tokyo"
+  },
+  {
+   "label": "a–b—c",
+   "key": "a b c"
+  },
+  {
+   "label": "B♯ minor",
+   "key": "b#minor"
+  },
+  {
+   "label": "MÜNCHEN",
+   "key": "munchen"
+  },
+  {
+   "label": "​zero​width﻿",
+   "key": "zerowidth"
+  },
+  {
+   "label": "Ελληνικά",
+   "key": "ελληνικα"
+  },
+  {
+   "label": "русский панк",
+   "key": "русскии панк"
+  },
+  {
+   "label": "日本語テスト",
+   "key": "日本語テスト"
+  },
+  {
+   "label": "straße",
+   "key": "straße"
+  },
+  {
+   "label": "İstanbul",
+   "key": "istanbul"
+  },
+  {
+   "label": " São Paulo",
+   "key": "sao paulo"
+  },
+  {
+   "label": "a/b/c//d",
+   "key": "a/b/c/d"
+  },
+  {
+   "label": "..dots..",
+   "key": ".dots"
+  },
+  {
+   "label": "//lead/trail/.",
+   "key": "lead/trail"
+  },
+  {
+   "label": "ｆｕｌｌｗｉｄｔｈ",
+   "key": "fullwidth"
+  },
+  {
+   "label": "①②③",
+   "key": "123"
+  },
+  {
+   "label": "ﬁne ﬂow",
+   "key": "fine flow"
+  },
+  {
+   "label": "x́ composed",
+   "key": "x composed"
+  },
+  {
+   "label": "عَرَبِي",
+   "key": "عربي"
+  }
+ ],
+ "extraction": {
+  "text": "Python and machine learning ruined my feed: it is all AI slop and LLM demos now. Even the group chats agree.",
+  "slugs": [
+   "ai-slop",
+   "group-chats",
+   "llms",
+   "machine-learning",
+   "python"
+  ]
+ }
+}

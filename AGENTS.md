@@ -21,3 +21,9 @@ specialization).
   interactive confirmation in consuming applications.
 - Consumers: devreal (re-exports the engine), verdun `frontend/ontology-ui`
   (chooser UI), disappointed (topic gauge + nomination flow).
+- The Rust workspace (`rust/`) must stay parity-locked to the JS engine:
+  `npm run build` regenerates `dist/seed.json`, `rust/ontology-core/src/tables.rs`,
+  the golden fixture, and `db/seeds/seed_ontology.sql`; run `cargo test` in
+  `rust/` after any normalization or seed change. Never edit generated files.
+- There is no shared database, ever. `db/ontology-migrations` is a manifest
+  applications apply to their own databases; rows never cross applications.
