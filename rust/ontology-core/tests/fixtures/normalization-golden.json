@@ -133,6 +133,10 @@
    "key": "social media"
   },
   {
+   "label": "Vibe coding",
+   "key": "vibe coding"
+  },
+  {
    "label": "Search engines",
    "key": "search engines"
   },
@@ -427,6 +431,46 @@
   {
    "label": "ci/cd",
    "key": "ci/cd"
+  },
+  {
+   "label": "social network",
+   "key": "social network"
+  },
+  {
+   "label": "social networks",
+   "key": "social networks"
+  },
+  {
+   "label": "tweet",
+   "key": "tweet"
+  },
+  {
+   "label": "tweets",
+   "key": "tweets"
+  },
+  {
+   "label": "Twitter",
+   "key": "twitter"
+  },
+  {
+   "label": "X.com",
+   "key": "x.com"
+  },
+  {
+   "label": "vibe code",
+   "key": "vibe code"
+  },
+  {
+   "label": "vibe-coded",
+   "key": "vibe coded"
+  },
+  {
+   "label": "AI coding",
+   "key": "ai coding"
+  },
+  {
+   "label": "coding with AI",
+   "key": "coding with ai"
   },
   {
    "label": "space exploration",

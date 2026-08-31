@@ -76,6 +76,17 @@ test('extraction pulls seeded topics out of text', () => {
   assert.ok(slugs.includes('group-chats'))
 })
 
+test('extraction calibrates social posts about AI-assisted coding', () => {
+  const snapshot = buildSeedSnapshot()
+  const extracted = extractSeedTopics(
+    "Andrew Chen's tweet about vibe coding made AI coding sound effortless.",
+    snapshot,
+  )
+  const slugs = extracted.map((entry) => entry.concept.slug)
+  assert.ok(slugs.includes('social-media'))
+  assert.ok(slugs.includes('vibe-coding'))
+})
+
 test('alias index resolves shorthand to slugs', () => {
   const aliases = seedAliasIndex(SEED_CONCEPTS)
   assert.equal(aliases.get(normalizeTopicLabel('golang')), 'go-language')

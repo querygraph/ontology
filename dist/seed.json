@@ -305,6 +305,30 @@
    "parents": [
     "internet-web",
     "society"
+   ],
+   "aliases": [
+    "social network",
+    "social networks",
+    "tweet",
+    "tweets",
+    "Twitter",
+    "X.com"
+   ]
+  },
+  {
+   "slug": "vibe-coding",
+   "name": "Vibe coding",
+   "level": "topic",
+   "summary": "Building software by prompting an AI and steering what it produces.",
+   "parents": [
+    "artificial-intelligence",
+    "software-engineering"
+   ],
+   "aliases": [
+    "vibe code",
+    "vibe-coded",
+    "AI coding",
+    "coding with AI"
    ]
   },
   {
