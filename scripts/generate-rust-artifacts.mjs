@@ -6,6 +6,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import {
   SEED_CONCEPTS,
+  SEED_VERSION,
   TOPIC_ALPHANUMERIC_CODEPOINT_RANGES,
   TOPIC_FORMAT_CODEPOINT_RANGES,
   TOPIC_MARK_CODEPOINT_RANGES,
@@ -18,7 +19,7 @@ mkdirSync('rust/ontology-core/src', { recursive: true })
 mkdirSync('rust/ontology-core/tests/fixtures', { recursive: true })
 
 // ---- seed ----
-writeFileSync('dist/seed.json', JSON.stringify({ version: 1, concepts: SEED_CONCEPTS }, null, 1))
+writeFileSync('dist/seed.json', JSON.stringify({ version: SEED_VERSION, concepts: SEED_CONCEPTS }, null, 1))
 
 // ---- dash ranges (JS \p{Pd} plus U+2212), computed from the runtime ----
 const dashRanges = []
