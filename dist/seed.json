@@ -798,6 +798,176 @@
    ]
   },
   {
+   "slug": "legal-services",
+   "name": "Legal services",
+   "level": "focus",
+   "summary": "Lawyers, law firms, and the hourly rate.",
+   "parents": [
+    "business",
+    "society"
+   ],
+   "aliases": [
+    "lawyers",
+    "law firms",
+    "attorneys"
+   ]
+  },
+  {
+   "slug": "financial-services",
+   "name": "Financial services",
+   "level": "focus",
+   "summary": "Banks, credit unions, and everyone holding your money.",
+   "parents": [
+    "business",
+    "economy"
+   ],
+   "aliases": [
+    "banks",
+    "banking",
+    "credit unions"
+   ]
+  },
+  {
+   "slug": "retail",
+   "name": "Retail & shopping",
+   "level": "focus",
+   "summary": "Stores, checkout lines, and return policies.",
+   "parents": [
+    "business",
+    "everyday-life"
+   ],
+   "aliases": [
+    "shopping",
+    "stores",
+    "shops"
+   ]
+  },
+  {
+   "slug": "real-estate",
+   "name": "Real estate",
+   "level": "focus",
+   "summary": "Buying, selling, and renting the roof over your head.",
+   "parents": [
+    "housing",
+    "business"
+   ],
+   "aliases": [
+    "realtors",
+    "property",
+    "real estate agents"
+   ]
+  },
+  {
+   "slug": "home-services",
+   "name": "Home services",
+   "level": "focus",
+   "summary": "Plumbers, electricians, contractors, and the window they gave you.",
+   "parents": [
+    "housing",
+    "everyday-life"
+   ],
+   "aliases": [
+    "contractors",
+    "plumbers",
+    "home repair",
+    "trades"
+   ]
+  },
+  {
+   "slug": "automotive-services",
+   "name": "Automotive services",
+   "level": "focus",
+   "summary": "Mechanics, body shops, and the estimate that grew.",
+   "parents": [
+    "transportation",
+    "everyday-life"
+   ],
+   "aliases": [
+    "car repair",
+    "mechanics",
+    "auto shops"
+   ]
+  },
+  {
+   "slug": "personal-care",
+   "name": "Personal care",
+   "level": "focus",
+   "summary": "Salons, barbers, spas, and the haircut you did not ask for.",
+   "parents": [
+    "everyday-life",
+    "health"
+   ],
+   "aliases": [
+    "salons",
+    "barbers",
+    "beauty services",
+    "spas"
+   ]
+  },
+  {
+   "slug": "bars-nightlife",
+   "name": "Bars & nightlife",
+   "level": "focus",
+   "summary": "Drinks, music, and the tab at the end.",
+   "parents": [
+    "food",
+    "culture"
+   ],
+   "aliases": [
+    "bars",
+    "pubs",
+    "nightclubs",
+    "nightlife"
+   ]
+  },
+  {
+   "slug": "lodging",
+   "name": "Lodging",
+   "level": "focus",
+   "summary": "Hotels, motels, and the room that faced the highway.",
+   "parents": [
+    "places"
+   ],
+   "aliases": [
+    "hotels",
+    "motels",
+    "inns",
+    "hospitality"
+   ]
+  },
+  {
+   "slug": "places-of-worship",
+   "name": "Places of worship",
+   "level": "focus",
+   "summary": "Churches, temples, mosques, and synagogues as places you go.",
+   "parents": [
+    "society",
+    "culture"
+   ],
+   "aliases": [
+    "churches",
+    "temples",
+    "mosques",
+    "synagogues",
+    "congregations"
+   ]
+  },
+  {
+   "slug": "nonprofits",
+   "name": "Nonprofits & civic organizations",
+   "level": "focus",
+   "summary": "Charities, NGOs, and community groups doing the work.",
+   "parents": [
+    "society"
+   ],
+   "aliases": [
+    "charities",
+    "ngos",
+    "civic organizations",
+    "community organizations"
+   ]
+  },
+  {
    "slug": "cities",
    "name": "Cities",
    "level": "focus",

@@ -329,6 +329,50 @@
    "key": "brunch"
   },
   {
+   "label": "Legal services",
+   "key": "legal services"
+  },
+  {
+   "label": "Financial services",
+   "key": "financial services"
+  },
+  {
+   "label": "Retail & shopping",
+   "key": "retail and shopping"
+  },
+  {
+   "label": "Real estate",
+   "key": "real estate"
+  },
+  {
+   "label": "Home services",
+   "key": "home services"
+  },
+  {
+   "label": "Automotive services",
+   "key": "automotive services"
+  },
+  {
+   "label": "Personal care",
+   "key": "personal care"
+  },
+  {
+   "label": "Bars & nightlife",
+   "key": "bars and nightlife"
+  },
+  {
+   "label": "Lodging",
+   "key": "lodging"
+  },
+  {
+   "label": "Places of worship",
+   "key": "places of worship"
+  },
+  {
+   "label": "Nonprofits & civic organizations",
+   "key": "nonprofits and civic organizations"
+  },
+  {
    "label": "Cities",
    "key": "cities"
   },
@@ -499,6 +543,166 @@
   {
    "label": "mlb",
    "key": "mlb"
+  },
+  {
+   "label": "lawyers",
+   "key": "lawyers"
+  },
+  {
+   "label": "law firms",
+   "key": "law firms"
+  },
+  {
+   "label": "attorneys",
+   "key": "attorneys"
+  },
+  {
+   "label": "banks",
+   "key": "banks"
+  },
+  {
+   "label": "banking",
+   "key": "banking"
+  },
+  {
+   "label": "credit unions",
+   "key": "credit unions"
+  },
+  {
+   "label": "shopping",
+   "key": "shopping"
+  },
+  {
+   "label": "stores",
+   "key": "stores"
+  },
+  {
+   "label": "shops",
+   "key": "shops"
+  },
+  {
+   "label": "realtors",
+   "key": "realtors"
+  },
+  {
+   "label": "property",
+   "key": "property"
+  },
+  {
+   "label": "real estate agents",
+   "key": "real estate agents"
+  },
+  {
+   "label": "contractors",
+   "key": "contractors"
+  },
+  {
+   "label": "plumbers",
+   "key": "plumbers"
+  },
+  {
+   "label": "home repair",
+   "key": "home repair"
+  },
+  {
+   "label": "trades",
+   "key": "trades"
+  },
+  {
+   "label": "car repair",
+   "key": "car repair"
+  },
+  {
+   "label": "mechanics",
+   "key": "mechanics"
+  },
+  {
+   "label": "auto shops",
+   "key": "auto shops"
+  },
+  {
+   "label": "salons",
+   "key": "salons"
+  },
+  {
+   "label": "barbers",
+   "key": "barbers"
+  },
+  {
+   "label": "beauty services",
+   "key": "beauty services"
+  },
+  {
+   "label": "spas",
+   "key": "spas"
+  },
+  {
+   "label": "bars",
+   "key": "bars"
+  },
+  {
+   "label": "pubs",
+   "key": "pubs"
+  },
+  {
+   "label": "nightclubs",
+   "key": "nightclubs"
+  },
+  {
+   "label": "nightlife",
+   "key": "nightlife"
+  },
+  {
+   "label": "hotels",
+   "key": "hotels"
+  },
+  {
+   "label": "motels",
+   "key": "motels"
+  },
+  {
+   "label": "inns",
+   "key": "inns"
+  },
+  {
+   "label": "hospitality",
+   "key": "hospitality"
+  },
+  {
+   "label": "churches",
+   "key": "churches"
+  },
+  {
+   "label": "temples",
+   "key": "temples"
+  },
+  {
+   "label": "mosques",
+   "key": "mosques"
+  },
+  {
+   "label": "synagogues",
+   "key": "synagogues"
+  },
+  {
+   "label": "congregations",
+   "key": "congregations"
+  },
+  {
+   "label": "charities",
+   "key": "charities"
+  },
+  {
+   "label": "ngos",
+   "key": "ngos"
+  },
+  {
+   "label": "civic organizations",
+   "key": "civic organizations"
+  },
+  {
+   "label": "community organizations",
+   "key": "community organizations"
   },
   {
    "label": "dating apps",

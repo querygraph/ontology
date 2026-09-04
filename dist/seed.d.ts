@@ -8,7 +8,7 @@ export type SeedConcept = {
     aliases?: string[];
     emoji?: string;
 };
-export declare const SEED_VERSION = 1;
+export declare const SEED_VERSION = 2;
 export declare const SEED_CONCEPTS: SeedConcept[];
 export type SeedSnapshotOptions = {
     versionId?: string;
