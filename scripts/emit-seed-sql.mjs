@@ -2,7 +2,7 @@
 // so applications load it through their own migrate pipelines with no
 // dependency on this package at load time. Regenerated at build.
 import { mkdirSync, writeFileSync } from 'node:fs'
-import { SEED_CONCEPTS, normalizeTopicLabel } from '../dist/index.js'
+import { SEED_CONCEPTS, SEED_VERSION, normalizeTopicLabel } from '../dist/index.js'
 
 const quote = (value) => value === null || value === undefined
   ? 'null'
@@ -15,7 +15,6 @@ const lines = [
   '',
 ]
 
-const SEED_VERSION = 1
 
 for (const concept of SEED_CONCEPTS) {
   lines.push(

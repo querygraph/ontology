@@ -97,3 +97,22 @@ test('the reference chooser adapter passes conformance', async () => {
   const { referenceChooserAdapter, runChooserConformance } = await import('../dist/conformance.js')
   assert.deepEqual(runChooserConformance(referenceChooserAdapter()), [])
 })
+
+
+test('personal writing has canonical concepts with appropriate narrower practices', () => {
+  const snapshot = buildSeedSnapshot()
+  assert.equal(snapshot.version, 3)
+  const writing = snapshot.concepts.find(({ slug }) => slug === 'writing')
+  assert.ok(writing)
+  assert.deepEqual(writing.childIds, ['poetry', 'journaling', 'letter-writing', 'storytelling'])
+  for (const [query, expected] of [
+    ['write', 'writing'], ['writing', 'writing'], ['poem', 'poetry'],
+    ['diary', 'journaling'], ['journalling', 'journaling'],
+    ['writing letters', 'letter-writing'],
+  ]) {
+    assert.equal(extractSeedTopics(query, snapshot)[0]?.concept.slug, expected, query)
+  }
+  assert.deepEqual(topicPrimaryTrail(snapshot, 'journaling').map(({ slug }) => slug), ['culture', 'writing', 'journaling'])
+  assert.ok(snapshot.concepts.some(({ slug }) => slug === 'media-journalism'))
+  assert.ok(snapshot.concepts.some(({ slug }) => slug === 'software-engineering'))
+})

@@ -2,7 +2,7 @@
   "name": "@querygraph/ontology",
   "version": "0.1.0",
   "type": "module",
-  "description": "Framework-neutral topic-ontology engineering: durable normalization, matching, three-tier navigation, cold-start seed, and text extraction",
+  "description": "Framework-neutral topic-ontology engineering: durable normalization, matching, navigation and exploration, cold-start seed, and text extraction",
   "license": "MIT",
   "repository": "github:querygraph/ontology",
   "exports": {
@@ -39,7 +39,15 @@
       "types": "./dist/conformance.d.ts",
       "default": "./dist/conformance.js"
     },
-    "./db/ontology-migrations": "./db/public/ontology-migrations.mjs"
+    "./db/ontology-migrations": "./db/public/ontology-migrations.mjs",
+    "./explorer": {
+      "types": "./dist/explorer.d.ts",
+      "default": "./dist/explorer.js"
+    },
+    "./concept-text": {
+      "types": "./dist/concept-text.d.ts",
+      "default": "./dist/concept-text.js"
+    }
   },
   "files": [
     "dist",

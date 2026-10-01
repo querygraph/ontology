@@ -16,7 +16,7 @@ export type SeedConcept = {
   emoji?: string
 }
 
-export const SEED_VERSION = 2
+export const SEED_VERSION = 3
 
 /* eslint-disable max-len */
 export const SEED_CONCEPTS: SeedConcept[] = [
@@ -157,6 +157,59 @@ export const SEED_CONCEPTS: SeedConcept[] = [
   { slug: 'group-chats', name: 'Group chats', level: 'topic', summary: 'The thread that never dies.', parents: ['everyday-life', 'social-media'] },
   { slug: 'robocalls', name: 'Robocalls', level: 'topic', summary: 'The phone, weaponized.', parents: ['everyday-life'] },
   { slug: 'self-improvement', name: 'Self-improvement', level: 'topic', summary: 'The better you, still pending.', parents: ['everyday-life', 'health'], aliases: ['myself'] },
+
+  // ---- personal practices and experiences ----
+  // These describe things people do, independently of the industries or
+  // institutions associated with them. Existing institutional concepts stay
+  // distinct; applications choose the appropriate view of this shared graph.
+  { slug: 'writing', name: 'Writing', level: 'focus', summary: 'Expressing thoughts, feelings, memories, and imagined worlds in your own words.', parents: ['culture', 'everyday-life'], aliases: ['write', 'creative writing', 'personal writing'] },
+  { slug: 'poetry', name: 'Poetry', level: 'topic', summary: 'Making and reading poems: language shaped by sound, rhythm, imagery, and feeling.', parents: ['writing', 'books'], aliases: ['poem', 'poems', 'writing poetry'] },
+  { slug: 'journaling', name: 'Journaling', level: 'topic', summary: 'Keeping a personal record of your days, thoughts, experiences, and feelings.', parents: ['writing', 'reflection'], aliases: ['journalling', 'diary', 'diaries', 'personal journal', 'keeping a diary', 'journal writing'] },
+  { slug: 'letter-writing', name: 'Letter writing', level: 'topic', summary: 'Writing personal letters and messages to another person in your own words.', parents: ['writing', 'relationships'], aliases: ['writing letters', 'handwritten letters', 'personal correspondence'] },
+  { slug: 'storytelling', name: 'Storytelling', level: 'topic', summary: 'Telling or writing stories from memory and imagination, alone or with others.', parents: ['writing', 'relationships'], aliases: ['telling stories', 'story telling'] },
+  { slug: 'reading', name: 'Reading', level: 'topic', summary: 'Spending time with written words and making your own meaning from them.', parents: ['books', 'everyday-life'], aliases: ['read', 'reading books', 'reading a book'] },
+  { slug: 'visual-arts', name: 'Visual arts', level: 'focus', summary: 'Expressing and exploring through images, shapes, colors, and materials.', parents: ['culture'] },
+  { slug: 'drawing', name: 'Drawing', level: 'topic', summary: 'Making marks, sketches, and images by hand from observation or imagination.', parents: ['visual-arts'], aliases: ['draw', 'sketching', 'sketch'] },
+  { slug: 'painting', name: 'Painting', level: 'topic', summary: 'Making pictures and exploring color with paint.', parents: ['visual-arts'], aliases: ['paint', 'watercolor', 'watercolour'] },
+  { slug: 'photography', name: 'Photography', level: 'topic', summary: 'Looking closely and making photographs of the world as you see it.', parents: ['visual-arts'], aliases: ['taking photos', 'taking photographs'] },
+  { slug: 'crafts', name: 'Crafts & making', level: 'focus', summary: 'Making useful or beautiful things with your hands and learning from the materials.', parents: ['culture', 'everyday-life'], aliases: ['crafting', 'handicrafts', 'handmade crafts'] },
+  { slug: 'pottery', name: 'Pottery', level: 'topic', summary: 'Shaping clay into objects by hand and on the wheel.', parents: ['crafts', 'visual-arts'], aliases: ['ceramics'] },
+  { slug: 'needlework', name: 'Needlework', level: 'topic', summary: 'Knitting, sewing, crocheting, and stitching with thread and yarn.', parents: ['crafts'], aliases: ['knitting', 'sewing', 'crochet', 'embroidery'] },
+  { slug: 'woodworking', name: 'Woodworking', level: 'topic', summary: 'Shaping, joining, and finishing wood with your own hands.', parents: ['crafts'], aliases: ['woodcraft'] },
+  { slug: 'singing', name: 'Singing', level: 'topic', summary: 'Making music with your own voice, alone or with other people.', parents: ['music'], aliases: ['sing', 'sang', 'choir singing', 'karaoke'] },
+  { slug: 'playing-instruments', name: 'Playing instruments', level: 'topic', summary: 'Making music, practicing, and improvising with a musical instrument.', parents: ['music'], aliases: ['playing music', 'making music', 'playing an instrument'] },
+  { slug: 'dancing', name: 'Dancing', level: 'topic', summary: 'Moving your body in rhythm for expression, pleasure, or connection.', parents: ['culture', 'fitness'], aliases: ['dance'] },
+  { slug: 'live-music', name: 'Live music', level: 'topic', summary: 'Being present with people performing and listening to music together.', parents: ['music'], aliases: ['concerts', 'going to concerts'] },
+  { slug: 'relationships', name: 'Relationships', level: 'focus', summary: 'Knowing, loving, listening to, and being present with other people.', parents: ['society', 'everyday-life'], aliases: ['personal relationships'] },
+  { slug: 'friendship', name: 'Friendship', level: 'topic', summary: 'Making time for friends and building companionship through shared life.', parents: ['relationships'], aliases: ['friends', 'friendships'] },
+  { slug: 'conversation', name: 'Conversation', level: 'topic', summary: 'Talking and listening to one another with attention and curiosity.', parents: ['relationships'], aliases: ['conversations', 'chatting'] },
+  { slug: 'marriage', name: 'Marriage', level: 'topic', summary: 'Choosing a shared life, making promises, and caring for a partnership.', parents: ['relationships'], aliases: ['marrying', 'getting married', 'wedding', 'weddings'] },
+  { slug: 'parenting', name: 'Parenting', level: 'topic', summary: 'Raising and caring for children as they discover the world.', parents: ['relationships'], aliases: ['raising children', 'raising kids'] },
+  { slug: 'celebrations', name: 'Celebrations', level: 'topic', summary: 'Marking meaningful moments with rituals, gatherings, and shared joy.', parents: ['relationships', 'culture'], aliases: ['celebrating', 'birthday celebrations'] },
+  { slug: 'volunteering', name: 'Volunteering', level: 'topic', summary: 'Giving your time and practical help to people and causes you care about.', parents: ['relationships', 'society'], aliases: ['volunteer', 'community service'] },
+  { slug: 'reflection', name: 'Reflection', level: 'focus', summary: 'Making room to notice your inner life, consider experiences, and find meaning.', parents: ['everyday-life', 'health'], aliases: ['self-reflection', 'personal reflection'] },
+  { slug: 'meditation', name: 'Meditation', level: 'topic', summary: 'Practicing attention and awareness through stillness, breath, or movement.', parents: ['reflection', 'mental-health'], aliases: ['meditating', 'mindfulness'] },
+  { slug: 'rest', name: 'Rest', level: 'topic', summary: 'Pausing, sleeping, and giving yourself time to recover without a task to finish.', parents: ['reflection', 'health'], aliases: ['resting', 'relaxation'] },
+  { slug: 'learning', name: 'Learning', level: 'focus', summary: 'Following curiosity, practicing skills, and learning through your own experience.', parents: ['everyday-life'], aliases: ['learning by doing', 'learning a skill'] },
+  { slug: 'language-learning', name: 'Learning languages', level: 'topic', summary: 'Learning to understand and speak another language through practice and conversation.', parents: ['learning'], aliases: ['language learning', 'learning a language'] },
+  { slug: 'nature', name: 'Time in nature', level: 'focus', summary: 'Experiencing the outdoors and noticing landscapes, plants, wildlife, and the changing light.', parents: ['places', 'everyday-life'], aliases: ['nature', 'being outdoors', 'outdoor experiences'] },
+  { slug: 'walking', name: 'Walking', level: 'topic', summary: 'Going on foot for pleasure, movement, company, and discovery.', parents: ['nature', 'fitness'], aliases: ['walk', 'strolling', 'taking a walk'] },
+  { slug: 'hiking', name: 'Hiking', level: 'topic', summary: 'Following trails through the outdoors and experiencing a landscape at your own pace.', parents: ['nature', 'fitness'], aliases: ['hike', 'trekking'] },
+  { slug: 'camping', name: 'Camping', level: 'topic', summary: 'Spending the night outdoors and making a temporary home in nature.', parents: ['nature'], aliases: ['camp', 'camping outdoors'] },
+  { slug: 'gardening', name: 'Gardening', level: 'topic', summary: 'Growing and tending plants with attention to soil, seasons, and living things.', parents: ['nature', 'everyday-life'], aliases: ['garden', 'growing plants'] },
+  { slug: 'birdwatching', name: 'Birdwatching', level: 'topic', summary: 'Watching and listening to birds in their surroundings.', parents: ['nature'], aliases: ['birding', 'bird watching'] },
+  { slug: 'stargazing', name: 'Stargazing', level: 'topic', summary: 'Looking at the night sky and noticing stars, planets, and constellations.', parents: ['nature', 'space'], aliases: ['star gazing'] },
+  { slug: 'sightseeing', name: 'Sightseeing', level: 'topic', summary: 'Visiting and looking closely at places, landmarks, and local sights.', parents: ['places'], aliases: ['seeing sights', 'visiting sights'] },
+  { slug: 'swimming', name: 'Swimming', level: 'topic', summary: 'Moving through water for pleasure, play, or exercise.', parents: ['fitness', 'sports'], aliases: ['swim'] },
+  { slug: 'running', name: 'Running', level: 'topic', summary: 'Moving on foot at your own pace for exercise, play, and pleasure.', parents: ['fitness', 'sports'], aliases: ['jogging', 'going for a run'] },
+  { slug: 'cycling', name: 'Cycling', level: 'topic', summary: 'Riding a bicycle for movement, exploration, transport, or pleasure.', parents: ['fitness', 'transportation'], aliases: ['bicycling', 'biking', 'riding a bicycle'] },
+  { slug: 'yoga', name: 'Yoga', level: 'topic', summary: 'Practicing postures, breath, and attention with your body.', parents: ['fitness', 'reflection'] },
+  { slug: 'play', name: 'Play', level: 'focus', summary: 'Doing things for enjoyment, curiosity, imagination, and the pleasure of being together.', parents: ['everyday-life', 'culture'], aliases: ['playing', 'playfulness'] },
+  { slug: 'board-games', name: 'Board games', level: 'topic', summary: 'Playing games around a table with other people.', parents: ['play'], aliases: ['tabletop games', 'playing board games'] },
+  { slug: 'puzzles', name: 'Puzzles', level: 'topic', summary: 'Enjoying a problem, pattern, or puzzle and finding your own way through it.', parents: ['play'], aliases: ['jigsaw puzzles', 'crosswords'] },
+  { slug: 'baking', name: 'Baking', level: 'topic', summary: 'Making bread, cakes, pastries, and other baked food by hand.', parents: ['cooking'], aliases: ['bake', 'baking bread'] },
+  { slug: 'sharing-meals', name: 'Sharing meals', level: 'topic', summary: 'Gathering around food and giving one another time and attention.', parents: ['food', 'relationships'], aliases: ['eating together', 'shared meals'] },
+
 ]
 /* eslint-enable max-len */
 
