@@ -9,6 +9,7 @@ each repository's AGENTS.md points here.
 ```
 querygraph/ontology           (this repo — data engineering)
   JS:   durable normalization · matching · three-tier navigator view-model ·
+        multi-selection explorer · suggestion-text ranking ·
         cold-start seed taxonomy · topic extraction · chooser conformance
   Rust: ontology-core (normalization with golden-fixture key parity, seed,
         extraction) · ontology-graph (Grust property-graph projection)
@@ -22,6 +23,8 @@ applications                  (specialization — each with ITS OWN database)
                  review, path optimization; grust projection in graph-wasm
   disappointed   vanilla-DOM gauge; concepts materialize into dis_topic;
                  Rust pipeline for extraction/labeling
+  aile.ss        personal-life snapshot and representative text; shared
+                 explorer view-model rendered as a vanilla-DOM picker
 ```
 
 **Shared machinery, never shared data.** There is no shared database and no
@@ -33,9 +36,11 @@ Corrections to the *machinery* — the schema shapes, the seed taxonomy, the
 normalizer — flow through this repository so every application inherits them;
 rows never do.
 
-**Cold-start ontology and topic extraction from text live here.** Interactive
-UI and selection live in Verdun. Applications reuse and specialize; they do
-not fork the normalizer or the seed.
+**Cold-start ontology and topic extraction from text live here.** Rendered
+interactive UI lives in Verdun or consuming applications. Shared navigation
+and selection state, relation traversal, and suggestion-ranking algorithms
+live here as framework-neutral view-models. Applications reuse and specialize;
+they do not fork the normalizer, seed, or view-models.
 
 ## What this package owns
 
@@ -56,7 +61,21 @@ not fork the normalizer or the seed.
   is the "Quora-like gauge": from any concept the UI can show higher-level
   concepts (the trail), peers (siblings in the band), and more detailed
   concepts (children).
-- **`seed`** — the cold-start taxonomy (~90 concepts, 11 areas, a
+- **`explorer`** — the framework-neutral multi-selection view-model. The
+  latest selected concept anchors broader (ancestor) and narrower
+  (descendant) recommendations; previous selections remain Bayesian evidence
+  but never broaden those relationship labels. Expected information gain
+  ranks recommendations, with greedy coverage for alternatives and bounded,
+  deterministic posterior sampling for larger graphs. The three-tier
+  navigator's existing contract is unchanged. Every result is a suggestion
+  awaiting explicit confirmation, never a durable classification.
+- **`concept-text`** — generic TF-IDF suggestion ranking over concept names,
+  slugs, descriptions, and optional application-owned representative text.
+  Its lightweight stemming applies only to suggestions, never normalization
+  or extraction. A representative model declares its snapshot version and
+  is ignored on a mismatch. Indices are independent, so one application's
+  language cannot leak into another application's suggestions.
+- **`seed`** — the cold-start taxonomy (157 concepts, 11 areas, a
   polyhierarchy: one concept may have several parents). Applications boot
   from `buildSeedSnapshot()` before any community proposal exists.
 - **`extraction`** — exact-key n-gram extraction of seeded topics from free
@@ -76,8 +95,12 @@ not fork the normalizer or the seed.
 - **Review and governance.** Proposal review, alias approval, and version
   publication are application workflows.
 - **Rendered UI.** Verdun ships the reusable chooser; apps may also render
-  the navigator directly (disappointed's vanilla gauge, DevReal's React
-  bands).
+  the navigator or explorer directly (disappointed's vanilla gauge,
+  DevReal's React bands, aile.ss's personal-life picker). DOM events, form
+  validation, authentication, review, and confirmation belong to those
+  interaction layers. Application-specific representative corpora and
+  snapshot filters also stay in the application; canonical IDs and graph
+  relationships remain shared.
 
 ## Consumption rules
 
@@ -95,6 +118,18 @@ not fork the normalizer or the seed.
   concepts, but corrections and additions of general interest belong here so
   every application inherits them.
 - Snapshots are immutable values. Derive; don't mutate.
+- `createOntologyExplorer(snapshot, { textIndex })` accepts a text index
+  built over that same snapshot; without an override it builds a generic
+  index from canonical concept descriptions. Use
+  `createConceptTextIndex(snapshot, model)` for a versioned application
+  corpus. The explorer, text-index functions, and their types are exported
+  at the package root and from `./explorer` and `./concept-text`.
+- Seed aliases apply in the explorer only to the current seed version,
+  mapped by slug to the snapshot's canonical IDs. Other snapshots use only
+  their own canonical names/slugs unless callers pass `exactAliases`:
+  approved labels mapped to canonical IDs. Those labels are normalized
+  internally and cannot override canonical names or slugs. Representative
+  text never enters this exact-alias map.
 - Every chooser skin must pass `runChooserConformance` from `./conformance`
   in its own test suite (Verdun: `smoke:ontology-conformance`; disappointed:
   `tests/gauge-conformance.test.mjs`). The runner derives truth from the
@@ -109,6 +144,12 @@ Extracted verbatim (import paths aside) from DevReal on 2026-08-19:
 `lib/topic-ui.ts` → `src/navigator.ts`.
 DevReal now re-exports these from the package, so its store, routes, and
 tests keep their import paths. The seed and extraction modules are new here.
+
+The explorer and generic concept-text engine were promoted from aile.ss in
+2026-09. Its personal-life snapshot and representative language remain local
+specializations. This promotion includes the last-selection relation fix,
+Bayesian ranking, and bounded posterior sampling so other applications can
+reuse the same behavior without copying picker logic.
 
 ## The Rust backend
 
